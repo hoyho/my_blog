@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
+from DjangoUeditor import urls as DjangoUeditor_urls
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'my_blog.views.home', name='home'),
@@ -25,5 +27,6 @@ urlpatterns = patterns('',
     url(r'^$', 'article.views.home'),
     url(r'^(?P<id>\d+)/$', 'article.views.detail', name='detail'),
     url(r'^wechat', 'article.views.weixin_main'),
+    url(r'^ueditor/', include('DjangoUeditor.urls' )),
 
 )

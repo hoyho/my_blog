@@ -5,12 +5,30 @@ from article.models import Article
 from datetime import datetime
 import time
 from django.http import Http404
-
+import re
 
 # Create your views here.
 def home(request):
-    post_list = Article.objects.all()  # 获取全部的Article对象
+    post_list = Article.objects.all() # 获取全部的Article对象
+    for post in post_list:
+        if post.intro:
+            post.content=post.intro
+        else:
+            post.content = post.content[0:500]
+
+    '''
+            try:
+                m = re.match(r'<p\s*.*?>\s*(.*?)\s*(</p>|<\/>)', post.content)
+                for p in m.group():
+                    post.content=post.content+'!!!!'+p+ str(m.endpos)
+            except Exception as e :
+                post.content= e.__str__()
+            finally:
+                ''
+            #post.content =post.content[0:540]
+    '''
     return render(request, 'home.html', {'post_list': post_list})
+
 
 def detail(request, id):
     try:
@@ -178,7 +196,7 @@ def response_msg(re_msg, messageType):
             msg['FromUserName'],
             msg['ToUserName'],
             str(int(time.time())),
-            u"客观请稍等，正在处理啦")
+            u"客官请稍等，正在处理啦")
     elif messageType =='event':
         echostr = textTpl % (
             msg['FromUserName'],

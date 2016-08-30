@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'article',  #这里填写的是app的名称
+    'DjangoUeditor',
+    'markdown_deux'
 ]
 
 MIDDLEWARE_CLASSES = [
