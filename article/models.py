@@ -1,7 +1,10 @@
 #coding:utf-8
 from django.db import models
 from django.core.urlresolvers import reverse
+
+#see how to add editor http://www.ziqiangxuetang.com/django/django-cms-develop2.html'
 from DjangoUeditor.models import UEditorField
+
 
 # Create your models here.
 class Article(models.Model) :
