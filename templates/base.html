@@ -14,12 +14,21 @@ var _hmt = _hmt || [];
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
-
     <title>D Day Blog</title>
+    <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
+
+    <!--以下三句实现高亮显示-->
+    <link rel="stylesheet" href="{{BASE_DIR}}/static/foundation.css">
+     <script src="{{BASE_DIR}}/static/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!--
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+-->
 
 </head>
 <body>

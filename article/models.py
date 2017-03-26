@@ -4,6 +4,7 @@ from django.core.urlresolvers import reverse
 
 #see how to add editor http://www.ziqiangxuetang.com/django/django-cms-develop2.html'
 from DjangoUeditor.models import UEditorField
+from ckeditor.fields import RichTextField
 
 
 # Create your models here.
@@ -13,10 +14,12 @@ class Article(models.Model) :
     intro = models.TextField(max_length=500,null = True,blank=True)
     date_time = models.DateTimeField(auto_now_add = True)  #博客日期
     #content = models.TextField(blank = True, null = True)  #博客文章正文
+    content = RichTextField('正文')
+    '''
     content = UEditorField('内容', height=300, width=1000,
                            default=u'', blank=True, imagePath="uploads/images/",
                            toolbars='besttome', filePath='uploads/files/')
-
+    '''
     #python2使用__unicode__, python3使用__str__
     def __str__(self) :
         return self.title

@@ -1,6 +1,10 @@
 <!--home.html-->
 {% extends "base.html" %}
-
+<!--
+{% load django_markdown %}
+{% load markdown_deux_tags %}
+{% load custom_markdown %}
+-->
 {% load custom_markdown %}
 
 {% block content %}
@@ -17,8 +21,12 @@
 
                 <div class="post-description">
                     <p>
-                        <!--{{ post.content }}-->
-                        {{ post.content|custom_markdown }}
+                        <!--{{ post.content }}
+                          {{ post.content|markdown }}
+                         {{ post.content|markdown }}
+                           {{ post.content|custom_markdown }}
+                        -->
+                         {{ post.content|markdown:'codehilite' }}
                     </p>
                 </div>
             <a class="pure-button" href="{% url "detail" id=post.id %}">Read More >>> </a>

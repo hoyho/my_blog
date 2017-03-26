@@ -19,8 +19,11 @@
                     <p>
                         <!--
                         {{ post.content }}
-                         {{ post.content|markdown }}
+                       {{ post.content|custom_markdown }}
+                      {{ post.content }}
+                        {% autoescape off %}{{  post.content }}{% endautoescape %}
                         -->
+
                         {{ post.content|custom_markdown }}
 
                     </p>
