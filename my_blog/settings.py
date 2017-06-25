@@ -27,8 +27,8 @@ SECRET_KEY = '@ptcfvcqdq8g2#9ax=2hpo%bj9p%5nrkdn62af8=)l1ns^(&j+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['128.199.134.134','hear2say.me', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -128,7 +128,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
@@ -168,13 +168,18 @@ CKEDITOR_CONFIGS = {
 # 把这些文件放到一起是为了用apache等部署的时候更方便
 STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 
+STATICFILES_DIRS = (
+
+    os.path.join(BASE_DIR, 'static'),
+)
+
 # 其它 存放静态文件的文件夹，可以用来存放项目中公用的静态文件，里面不能包含 STATIC_ROOT
 # 如果不想用 STATICFILES_DIRS 可以不用，都放在 app 里的 static 中也可以
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "common_static"),
+#STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, "common_static"),
     #'/home/hoyho/ENV3/bin/my_blog/DjangoUeditor/static/',  # 用不到的时候可以不写这一行
     #'/root/ENV3/bin/my_blog/DjangoUeditor/static/',  # 用不到的时候可以不写这一行
-)
+#)
 
 
 
