@@ -16,7 +16,7 @@ Including another URLconf
 #from django.conf.urls import patterns, include, url
 from django.conf.urls import include, url
 from django.contrib import admin
-from article.views import home,detail,weixin_main
+from article.views import home,detail,weixin_main,archives,about_me,search_tag,blog_search,RSSFeed
 
 from DjangoUeditor import urls as DjangoUeditor_urls
 import  ckeditor
@@ -45,8 +45,13 @@ urlpatterns =[
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', home, name='home'),
     url(r'^(?P<id>\d+)/$', detail, name='detail'),
+    url(r'^archives/$', archives, name='archives'),
+    url(r'^aboutme/$', about_me, name = 'about_me'),
+    url(r'^tag(?P<tag>\w+)/$', search_tag, name='search_tag'),
     url(r'^wechat', weixin_main,name='weixin_main'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^search/$',blog_search, name = 'search'),
+    url(r'^feed/$', RSSFeed(), name="RSS"),  # 新添加的urlconf, 并将name设置为RSS, 方便在模板中使用url
     #url(r'^ueditor/', include('DjangoUeditor.urls' )),
 
 ]
