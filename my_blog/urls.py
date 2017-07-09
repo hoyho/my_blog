@@ -16,6 +16,10 @@ Including another URLconf
 #from django.conf.urls import patterns, include, url
 from django.conf.urls import include, url
 from django.contrib import admin
+
+from django.conf import settings
+from django.views.static import serve
+
 from article.views import home,detail,weixin_main,archives,about_me,search_tag,blog_search,RSSFeed
 
 from DjangoUeditor import urls as DjangoUeditor_urls
@@ -51,7 +55,15 @@ urlpatterns =[
     url(r'^wechat', weixin_main,name='weixin_main'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^search/$',blog_search, name = 'search'),
-    url(r'^feed/$', RSSFeed(), name="RSS"),  # 新添加的urlconf, 并将name设置为RSS, 方便在模板中使用url
+    url(r'^feed/$', RSSFeed(), name="RSS"), #新添加的urlconf, 并将name设置为RSS, 方便在模板中使用url
     #url(r'^ueditor/', include('DjangoUeditor.urls' )),
 
+
 ]
+
+# serving media files only on debug mode
+if settings.DEBUG:
+    urlpatterns += [
+        url(r'^media/(?P<path>.*)$', serve, {
+            'document_root': settings.MEDIA_ROOT
+        })]

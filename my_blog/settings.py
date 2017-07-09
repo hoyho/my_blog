@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'DjangoUeditor',
     'django_markdown',
     'ckeditor',
+    'ckeditor_uploader',
     'pygments',
     'markdown_deux'
 ]
@@ -132,7 +133,9 @@ STATIC_URL = "/static/"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-CKEDITOR_UPLOAD_PATH = "article_images"
+CKEDITOR_UPLOAD_PATH = "article_images/"
+#CKEDITOR_IMAGE_BACKEND = 'PIL'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
 
 
 CKEDITOR_CONFIGS = {
@@ -157,6 +160,7 @@ CKEDITOR_CONFIGS = {
                 # add the follow plugins
                 'codesnippet',
                 'widget',
+                'uploadimage',
                 'dialog',
             ]),
 	}

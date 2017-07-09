@@ -18,3 +18,4 @@ pip install django-markdown-deux
 
 //pip install patterns
 pip install lxml
+pip install pip install pillow
