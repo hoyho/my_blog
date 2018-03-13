@@ -1,0 +1,9 @@
+django
+
+django_markdown
+
+django-ckeditor
+pygments
+django-markdown-deux
+lxml
+pillow
