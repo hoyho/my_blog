@@ -10,6 +10,13 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script>
+        function GoToTop(){
+             $("html,body").animate({scrollTop:"0px"},1000);
+            return true;
+        }
+</script>
 
 <head>
     <meta charset="utf-8">
@@ -37,7 +44,7 @@
 </head>
 
 <body>
-    <div id="layout-" class="pure-g">
+    <div id="layout" class="pure-g">
 
         <!--new sidebar begin-->
         <aside id="menu" class="show">
@@ -50,7 +57,7 @@
                     <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
                         <div class="brand">
                             <a href="/" class="avatar waves-effect waves-circle waves-light">
-                                <img src="/img/profile.jpg">
+                                <img src="/static/profile.jpg">
                             </a>
                             <hgroup class="introduce">
                                 <h5 class="nickname">
@@ -139,7 +146,8 @@
             </div>
         </div>
     </div>
-    <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light in"><span class="icon icon-lg icon-chevron-up"></span></a>
+    <a href="JavaScript:GoToTop();" id="gotop" class="waves-effect waves-circle waves-light in">
+        <span class="icon icon-lg icon-chevron-up"></span></a>
 </body>
 
 </html>

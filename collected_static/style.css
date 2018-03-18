@@ -1238,3 +1238,10 @@ pre .javascript .function,pre .keyword,pre .selector-class,pre .selector-id{colo
 li.post-list-item.fade.in {
     list-style: none;
 }
+
+.footer ul {
+    list-style: none;
+    padding: 0.05 em 0;
+     display: inline; 
+}
+
