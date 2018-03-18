@@ -16,10 +16,13 @@ var _hmt = _hmt || [];
 <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
     <title>D Day Blog</title>
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <!--link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css"-->
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
+    <link rel="stylesheet" href="/static/foundation.css" >
+    <link rel="stylesheet" href="/static/style.css" >
+    <script src="/static/main.min.js" > </script>
 
     <!--以下三句实现高亮显示-->
     <link rel="stylesheet" href="{{BASE_DIR}}/static/foundation.css">
@@ -32,8 +35,75 @@ var _hmt = _hmt || [];
 
 </head>
 <body>
-<div id="layout" class="pure-g">
-    <div class="sidebar pure-u-1 pure-u-md-1-4">
+<div id="layout-" class="pure-g">
+
+    <!--new sidebar begin-->
+    <aside id="menu" class="show">
+            <div class="inner flex-row-vertical">
+                <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light"
+                id="menu-off">
+                    <i class="icon icon-lg icon-close">
+                    </i>
+                </a>
+                <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+                    <div class="brand">
+                        <a href="/" class="avatar waves-effect waves-circle waves-light">
+                            <img src="/img/profile.jpg">
+                        </a>
+                        <hgroup class="introduce">
+                            <h5 class="nickname">
+                                Hoyho
+                            </h5>
+                            <a href="mailto:luohaihao@gmail.com" title="luohaihao@gmail.com" class="mail">
+                                luohaihao@gmail.com
+                            </a>
+                        </hgroup>
+                    </div>
+                </div>
+                <div class="scroll-wrap flex-col">
+                    <ul class="nav">
+                        <li class="waves-block waves-effect">
+                            <a href="/">
+                                <i class="icon icon-lg icon-home">
+                                </i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="waves-block waves-effect ">
+                            <a href="/archives">
+                                <i class="icon icon-lg icon-archives">
+                                </i>
+                                Archives
+                            </a>
+                        </li>
+                        <li class="waves-block waves-effect">
+                            <a href="/tags">
+                                <i class="icon icon-lg icon-tags">
+                                </i>
+                                Tags
+                            </a>
+                        </li>
+                        <li class="waves-block waves-effect">
+                            <a href="https://github.com/hoyho" target="_blank">
+                                <i class="icon icon-lg icon-github">
+                                </i>
+                                Github
+                            </a>
+                        </li>
+                        <li class="waves-block waves-effect">
+                            <a href="http://www.weibo.com/ysweb" target="_blank">
+                                <i class="icon icon-lg icon-weibo">
+                                </i>
+                                Weibo
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside> 
+    <!--new sidebar end-->  
+
+    <div class="sidebar pure-u-1 pure-u-md-1-4" style="display:none" >
         <div class="header">
             <h1 class="brand-title"><a href="/">D Day Blog</a></h1>
             <h2 class="brand-tagline">Hoyho - Hear to say</h2>
