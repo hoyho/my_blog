@@ -34,31 +34,15 @@
                 </div>
                 <div class="post-footer">
                     <ul class="article-tag-list">
+                        
+                        {% for tag_value in post.tags %}
+                        
                         <li class="article-tag-list-item">
-                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/SPA/">
-                                SPA
+                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/{{tag_value}}/">
+                                {{tag_value}}
                             </a>
                         </li>
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/Vue/">
-                                Vue
-                            </a>
-                        </li>
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/Vuex/">
-                                Vuex
-                            </a>
-                        </li>
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/数据同步/">
-                                数据同步
-                            </a>
-                        </li>
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/数据流/">
-                                数据流
-                            </a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </article>

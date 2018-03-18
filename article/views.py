@@ -16,6 +16,8 @@ def home(request):
             post.content=post.intro
         else:
             post.content = post.content[0:500]
+        if post.tags is not None:
+            post.tags = str(post.tags).split(',')
 
     '''
             try:
