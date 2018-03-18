@@ -1233,3 +1233,15 @@ pre .javascript .function,pre .keyword,pre .selector-class,pre .selector-id{colo
     text-decoration: none;
     border-radius: 2px;
 }
+
+/*去除list 点*/
+li.post-list-item.fade.in {
+    list-style: none;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0.05 em 0;
+     display: inline; 
+}
+

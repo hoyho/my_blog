@@ -2,31 +2,32 @@
 <!doctype html>
 <html lang="en">
 <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?89e922b51d7c20663a78f0b5ab83d1be";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?89e922b51d7c20663a78f0b5ab83d1be";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
 </script>
+
 <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
     <title>D Day Blog</title>
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
     <!--link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css"-->
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
-    <link rel="stylesheet" href="/static/foundation.css" >
-    <link rel="stylesheet" href="/static/style.css" >
-    <script src="/static/main.min.js" > </script>
+    <link rel="stylesheet" href="/static/foundation.css">
+    <link rel="stylesheet" href="/static/style.css">
+
 
     <!--以下三句实现高亮显示-->
     <link rel="stylesheet" href="{{BASE_DIR}}/static/foundation.css">
-     <script src="{{BASE_DIR}}/static/highlight.pack.js"></script>
+    <script src="{{BASE_DIR}}/static/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
     <!--
@@ -34,129 +35,111 @@ var _hmt = _hmt || [];
 -->
 
 </head>
-<body>
-<div id="layout-" class="pure-g">
 
-    <!--new sidebar begin-->
-    <aside id="menu" class="show">
-            <div class="inner flex-row-vertical">
-                <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light"
-                id="menu-off">
-                    <i class="icon icon-lg icon-close">
-                    </i>
-                </a>
-                <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-                    <div class="brand">
-                        <a href="/" class="avatar waves-effect waves-circle waves-light">
-                            <img src="/img/profile.jpg">
-                        </a>
-                        <hgroup class="introduce">
-                            <h5 class="nickname">
-                                Hoyho
-                            </h5>
-                            <a href="mailto:luohaihao@gmail.com" title="luohaihao@gmail.com" class="mail">
-                                luohaihao@gmail.com
+<body>
+    <div id="layout-" class="pure-g">
+
+        <!--new sidebar begin-->
+        <aside id="menu" class="show">
+            <div id="sidebar pure-u-1 pure-u-md-1-4">
+                <div class="inner flex-row-vertical">
+                    <a href="javascript:;" style="display:none" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+                        <i class="icon icon-lg icon-close">
+                        </i>
+                    </a>
+                    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+                        <div class="brand">
+                            <a href="/" class="avatar waves-effect waves-circle waves-light">
+                                <img src="/img/profile.jpg">
                             </a>
-                        </hgroup>
+                            <hgroup class="introduce">
+                                <h5 class="nickname">
+                                    Hoyho
+                                </h5>
+                                <a href="mailto:luohaihao@gmail.com" title="luohaihao@gmail.com" class="mail">
+                                    luohaihao@gmail.com
+                                </a>
+                            </hgroup>
+                        </div>
+                    </div>
+                    <div class="scroll-wrap flex-col">
+                        <ul class="nav">
+                            <li class="waves-block waves-effect">
+                                <a href="/">
+                                    <i class="icon icon-lg icon-home">
+                                    </i>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="waves-block waves-effect ">
+                                <a href="/archives">
+                                    <i class="icon icon-lg icon-archives">
+                                    </i>
+                                    Archives
+                                </a>
+                            </li>
+                            <li class="waves-block waves-effect">
+                                <a href="/tags">
+                                    <i class="icon icon-lg icon-tags">
+                                    </i>
+                                    Tags
+                                </a>
+                            </li>
+                            <li class="waves-block waves-effect">
+                                <a href="https://github.com/hoyho" target="_blank">
+                                    <i class="icon icon-lg icon-github">
+                                    </i>
+                                    Github
+                                </a>
+                            </li>
+                            <li class="waves-block waves-effect">
+                                <a href="/feed" target="_blank">
+                                    <i class="icon icon-lg icon-RSS">
+                                    </i>
+                                    RSS
+                                </a>
+                            </li>
+                            <li class="waves-block waves-effect">
+                                <a href="/aboutme">
+                                    <i class="icon icon-lg icon-aboutme">
+                                    </i>
+                                    About Me
+                                </a>
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
-                <div class="scroll-wrap flex-col">
-                    <ul class="nav">
-                        <li class="waves-block waves-effect">
-                            <a href="/">
-                                <i class="icon icon-lg icon-home">
-                                </i>
-                                Home
-                            </a>
-                        </li>
-                        <li class="waves-block waves-effect ">
-                            <a href="/archives">
-                                <i class="icon icon-lg icon-archives">
-                                </i>
-                                Archives
-                            </a>
-                        </li>
-                        <li class="waves-block waves-effect">
-                            <a href="/tags">
-                                <i class="icon icon-lg icon-tags">
-                                </i>
-                                Tags
-                            </a>
-                        </li>
-                        <li class="waves-block waves-effect">
-                            <a href="https://github.com/hoyho" target="_blank">
-                                <i class="icon icon-lg icon-github">
-                                </i>
-                                Github
-                            </a>
-                        </li>
-                        <li class="waves-block waves-effect">
-                            <a href="http://www.weibo.com/ysweb" target="_blank">
-                                <i class="icon icon-lg icon-weibo">
-                                </i>
-                                Weibo
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </aside> 
-    <!--new sidebar end-->  
-
-    <div class="sidebar pure-u-1 pure-u-md-1-4" style="display:none" >
-        <div class="header">
-            <h1 class="brand-title"><a href="/">D Day Blog</a></h1>
-            <h2 class="brand-tagline">Hoyho - Hear to say</h2>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="button-success pure-button" href="/">主页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="button-success pure-button" href="{% url "archives" %}">归档</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="pure-button" href="https://github.com/hoyho">Github</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="button-error pure-button" href="http://weibo.com/u/1650265552">Weibo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="button-success pure-button" href="/">专题</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="button-success pure-button" href="{% url "about_me" %}">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="button-success pure-button" href="{% url "RSS" %}">RSS</a>
-                    </li>
-                    <li>
-                        <form class="pure-form" action="/search/" method="get">
-                        <input class="pure-input-3-3" type="text" name="s" placeholder="search">
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+        </aside>
+        <!--new sidebar end-->
 
 
-    <div class="content pure-u-1 pure-u-md-3-4">
-        <div>
-            {% block content %}
-            {% endblock %}
-            <div class="footer">
-                <div class="pure-menu pure-menu-horizontal pure-menu-open">
-                    <ul>
-                        <li><a href="https://github.com/hoyho">About Me</a></li>
-                        <li><a href="https://www.facebook.com/profile.php?id=100004783232594&ref=br_rs">Facebook</a></li>
-                        <li><a href="http://github.com/yahoo/pure/">GitHub</a></li>
-                    </ul>
+        <div class="content pure-u-1 pure-u-md-3-4">
+            <div>
+                {% block content %} 
+                {% endblock %}
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                        <ul>
+                            <span>
+                                <a href="https://github.com/hoyho">About Me</a>
+                            </span>
+                              |  
+                            <span>
+                                <a href="https://www.facebook.com/profile.php?id=100004783232594&ref=br_rs">Facebook</a>
+                            </span>
+                             |  
+                            <span>
+                                <a href="http://github.com/yahoo/pure/">GitHub</a>
+                            </span>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
+    <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light in"><span class="icon icon-lg icon-chevron-up"></span></a>
 </body>
+
 </html>

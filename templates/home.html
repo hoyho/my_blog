@@ -10,7 +10,63 @@
 {% block content %}
 <div class="posts">
     {% for post in post_list %}
-        <section class="post">
+
+    <li class="post-list-item fade in">
+            <article id="post-data-sync-in-vue-single-page-application" class="article-card article-type-post"
+            itemprop="blogPost">
+                <div class="post-meta">
+                    <time class="post-time" title="" datetime=""
+                    itemprop="datePublished">
+                    {{ post.date_time |date:"Y /m /d"}}
+                    </time>
+                </div>
+                <h3 class="post-title" itemprop="name">
+                    <a class="post-title-link" href="{% url "detail" id=post.id %}">
+                            {{ post.title }}
+                    </a>
+                </h3>
+                <div class="post-content" id="post-content" itemprop="postContent">
+                        <p>
+                                 {{ post.content|markdown:'codehilite' }}
+                            </p>
+                            <a class="pure-button" href="{% url "detail" id=post.id %}">Read More >>> </a>
+                    
+                </div>
+                <div class="post-footer">
+                    <ul class="article-tag-list">
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/SPA/">
+                                SPA
+                            </a>
+                        </li>
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/Vue/">
+                                Vue
+                            </a>
+                        </li>
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/Vuex/">
+                                Vuex
+                            </a>
+                        </li>
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/数据同步/">
+                                数据同步
+                            </a>
+                        </li>
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link waves-effect waves-button" href="/tags/数据流/">
+                                数据流
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </li>
+
+
+    
+        <section class="post" style="display:none">
             <header class="post-header">
                 <h2 class="post-title"><a href="{% url "detail" id=post.id %}">{{ post.title }}</a></h2>
 
