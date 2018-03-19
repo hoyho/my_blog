@@ -24,10 +24,10 @@
     <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
     <title>D Day Blog</title>
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
-    <!--link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css"-->
+    <!--link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" -->
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
-    <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
+    <!--link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css"-->
     <link rel="stylesheet" href="/static/foundation.css">
     <link rel="stylesheet" href="/static/style.css">
 
@@ -71,21 +71,21 @@
                     </div>
                     <div class="scroll-wrap flex-col">
                         <ul class="nav">
-                            <li class="waves-block waves-effect">
+                            <li class="waves-block waves-effect {{active_flag_home}}">
                                 <a href="/">
                                     <i class="icon icon-lg icon-home">
                                     </i>
                                     Home
                                 </a>
                             </li>
-                            <li class="waves-block waves-effect ">
+                            <li class="waves-block waves-effect {{active_flag_archive}}">
                                 <a href="/archives">
-                                    <i class="icon icon-lg icon-archives">
+                                    <i class="icon icon-lg icon-archives ">
                                     </i>
                                     Archives
                                 </a>
                             </li>
-                            <li class="waves-block waves-effect">
+                            <li class="waves-block waves-effect {{active_flag_tag}}">
                                 <a href="/tags">
                                     <i class="icon icon-lg icon-tags">
                                     </i>
@@ -101,19 +101,23 @@
                             </li>
                             <li class="waves-block waves-effect">
                                 <a href="/feed" target="_blank">
-                                    <i class="icon icon-lg icon-RSS">
+                                    <i class="icon icon-lg icon-feed">
                                     </i>
                                     RSS
                                 </a>
                             </li>
-                            <li class="waves-block waves-effect">
+                            <li class="waves-block waves-effect {{active_flag_aboutme}}">
                                 <a href="/aboutme">
-                                    <i class="icon icon-lg icon-aboutme">
+                                    <i class="icon icon-lg icon-user">
                                     </i>
                                     About Me
                                 </a>
                             </li>
-
+                            <li>
+                                <form class="pure-form" action="/search/" method="get">
+                                    <input class="pure-input-3-3" type="text" name="s" placeholder="search">
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>

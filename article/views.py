@@ -19,18 +19,7 @@ def home(request):
         if post.tags is not None:
             post.tags = str(post.tags).split(',')
 
-    '''
-            try:
-                m = re.match(r'<p\s*.*?>\s*(.*?)\s*(</p>|<\/>)', post.content)
-                for p in m.group():
-                    post.content=post.content+'!!!!'+p+ str(m.endpos)
-            except Exception as e :
-                post.content= e.__str__()
-            finally:
-                ''
-            #post.content =post.content[0:540]
-    '''
-    return render(request, 'home.html', {'post_list': post_list})
+    return render(request, 'home.html', {'post_list': post_list,'active_flag_home':'active'})
 
 
 def detail(request, id):
@@ -48,16 +37,17 @@ def detail(request, id):
 
 def archives(request) :
     try:
-        post_list = Article.objects.all()
+        post_list = Article.objects.all()[：20]
     except Article.DoesNotExist :
         raise Http404
     return render(request, 'archives.html', {'post_list' : post_list,
-                                            'error' : False})
+                                            'error' : False,
+                                            'active_flag_archive':'active'})
 
 
 
 def about_me(request) :
-    return render(request, 'aboutme.html')
+    return render(request, 'aboutme.html',{'active_flag_aboutme':'active'})
 
 
 
@@ -66,7 +56,8 @@ def search_tag(request, tag) :
         post_list = Article.objects.filter(category__iexact = tag) #contains
     except Article.DoesNotExist :
         raise Http404
-    return render(request, 'tag.html', {'post_list' : post_list})
+    return render(request, 'tag.html', {'post_list' : post_list,
+    'active_flag_tag':'active'})
 
 
 def blog_search(request):
@@ -78,10 +69,12 @@ def blog_search(request):
             post_list = Article.objects.filter(title__icontains = s)
             if len(post_list) == 0 :
                 return render(request,'search.html', {'post_list' : post_list,
-                                                    'error' : True})
+                                                    'error' : True,
+                                                    'active_flag_tag':'active'})
             else :
                 return render(request,'search.html', {'post_list' : post_list,
-                                                    'error' : False})
+                                                    'error' : False,
+                                                    'active_flag_tag':'active'})
     return redirect('/')
 
 

@@ -800,7 +800,7 @@ a:hover{color:#303f9f;text-decoration:underline}
 #menu .introduce{margin:1em 0 0;color:#fff}
 #menu .mail{display:inline-block;padding-top:4px;color:#c5cae9;font-size:13px}
 #menu .scroll-wrap{position:relative;overflow-y:auto}
-#menu .nav{margin:0;padding:12px 0;height:300px;min-height:calc(100% - 115px);list-style:none;line-height:44px}
+#menu .nav{margin:0;padding:12px 0;height:400px;min-height:calc(100% - 115px);list-style:none;line-height:44px}
 #menu .nav li{padding:0 20px}
 #menu .nav li .icon{position:absolute;top:0;left:20px;line-height:inherit}
 #menu .nav li.active,#menu .nav li:hover{background:rgba(0,0,0,.05)}
@@ -1245,3 +1245,15 @@ li.post-list-item.fade.in {
      display: inline; 
 }
 
+
+/*search button*/
+.pure-form input[type=text], .pure-form input[type=password], .pure-form input[type=email], .pure-form input[type=url], .pure-form input[type=date], .pure-form input[type=month], .pure-form input[type=time], .pure-form input[type=datetime], .pure-form input[type=datetime-local], .pure-form input[type=week], .pure-form input[type=number], .pure-form input[type=search], .pure-form input[type=tel], .pure-form input[type=color], .pure-form select, .pure-form textarea {
+    padding: .5em .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
