@@ -1257,3 +1257,10 @@ li.post-list-item.fade.in {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+/*分页*/
+.pagination {
+    overflow: auto;
+    text-align: center;
+    padding: 15px 0;
+}
