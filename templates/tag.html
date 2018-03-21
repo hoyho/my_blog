@@ -1,0 +1,55 @@
+ {% extends "base.html" %} 
+
+ {% load custom_markdown %}
+
+  {% block content %}
+
+
+<div class="container body-wrap fade in">
+    <h3 class="archive-separator" id="tag-{{tag_name}}">{{tag_name}}</h3>
+    <div class="waterfall in">
+
+        {%for post in post_list %}
+        <div class="waterfall-item-ext">
+            <article class="article-card archive-article">
+                <div class="post-meta">
+                    <time class="post-time" itemprop="datePublished">{{ post.date_time |date:"Y /m /d"}}</time>
+
+
+                    <ul class="article-category-list">
+                        <li class="article-category-list-item">
+                            <a class="article-category-list-link" href="/category/{{ post.category }}">{{ post.category }}</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <h3 class="post-title" itemprop="name">
+                    <a class="post-title-link" href="{% url "detail" id=post.id %}">{{ post.title }}</a>
+                </h3>
+
+
+                <div class="post-footer">
+                    <ul class="article-tag-list">
+
+                        {% for tag_value in post.tags %}
+
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link waves-effect waves-button" href="/tag/{{tag_value}}/">
+                                {{tag_value}}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </article>
+        </div>
+        <br> 
+        {% endfor%}
+
+    </div>
+</div>
+
+{% endblock %}

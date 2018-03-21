@@ -66,11 +66,15 @@ def about_me(request) :
 
 def search_tag(request, tag) :
     try:
-        post_list = Article.objects.filter(category__iexact = tag) #contains
+        post_list = Article.objects.filter(tags__contains=tag) #contains
+        for post in post_list:
+            if post.tags is not None:
+                post.tags = str(post.tags).split(',')
     except Article.DoesNotExist :
-        raise Http404
+        return render(request, 'tag.html',{})
+        #raise Http404
     return render(request, 'tag.html', {'post_list' : post_list,
-    'active_flag_tag':'active'})
+    'active_flag_tag':'active','tag_name':str(tag)})
 
 
 def blog_search(request):
