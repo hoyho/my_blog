@@ -50,7 +50,7 @@ def detail(request, id):
 
 def archives(request) :
     try:
-        post_list = Article.objects.order_by('-pub_date')[:20]
+        post_list = Article.objects.order_by('-date_time')[:20]
     except Article.DoesNotExist :
         raise Http404
     return render(request, 'archives.html', {'post_list' : post_list,
