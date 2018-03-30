@@ -800,7 +800,7 @@ a:hover{color:#303f9f;text-decoration:underline}
 #menu .introduce{margin:1em 0 0;color:#fff}
 #menu .mail{display:inline-block;padding-top:4px;color:#c5cae9;font-size:13px}
 #menu .scroll-wrap{position:relative;overflow-y:auto}
-#menu .nav{margin:0;padding:12px 0;height:400px;min-height:calc(100% - 115px);list-style:none;line-height:44px}
+#menu .nav{margin:0;padding:12px 0;min-height:calc(100% - 115px);list-style:none;line-height:44px}
 #menu .nav li{padding:0 20px}
 #menu .nav li .icon{position:absolute;top:0;left:20px;line-height:inherit}
 #menu .nav li.active,#menu .nav li:hover{background:rgba(0,0,0,.05)}
