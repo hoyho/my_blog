@@ -786,10 +786,10 @@ a:hover{color:#303f9f;text-decoration:underline}
 .waves-circle{text-align:center;width:2.5em;height:2.5em;line-height:2.5em;border-radius:50%}
 .waves-float{-webkit-mask-image:none;box-shadow:0 1px 1.5px 1px rgba(0,0,0,.12);-webkit-transition:all .3s;transition:all .3s}
 .waves-float:active{box-shadow:0 8px 20px 1px rgba(0,0,0,.3)}
-.waves-block{display:block}
+.waves-block{display:""}
 #main,.container{position:relative}
 #menu-off{position:absolute;top:0;left:100%;-webkit-transition:.4s ease-in-out;transition:.4s ease-in-out}
-#menu{position:fixed;top:0;left:0;bottom:0;z-index:66;width:240px;min-height:100%;background:#fff;box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);-webkit-transition:.4s cubic-bezier(.18,.81,.3,.89);transition:.4s cubic-bezier(.18,.81,.3,.89);will-change:transform,-webkit-transform}
+#menu{top:0;left:0;bottom:0;z-index:66;min-height:100%;background:#fff;box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);-webkit-transition:.4s cubic-bezier(.18,.81,.3,.89);transition:.4s cubic-bezier(.18,.81,.3,.89);will-change:transform,-webkit-transform}
 #menu.hide{-webkit-transform:translateX(-100%);transform:translateX(-100%)}
 #menu.hide #menu-off{-webkit-transform:scale(0);transform:scale(0)}
 #menu.hide+#main{padding-left:0}
@@ -800,7 +800,7 @@ a:hover{color:#303f9f;text-decoration:underline}
 #menu .introduce{margin:1em 0 0;color:#fff}
 #menu .mail{display:inline-block;padding-top:4px;color:#c5cae9;font-size:13px}
 #menu .scroll-wrap{position:relative;overflow-y:auto}
-#menu .nav{margin:0;padding:12px 0;height:300px;min-height:calc(100% - 115px);list-style:none;line-height:44px}
+#menu .nav{margin:0;padding:12px 0;min-height:calc(100% - 115px);list-style:none;line-height:44px}
 #menu .nav li{padding:0 20px}
 #menu .nav li .icon{position:absolute;top:0;left:20px;line-height:inherit}
 #menu .nav li.active,#menu .nav li:hover{background:rgba(0,0,0,.05)}
@@ -1245,3 +1245,22 @@ li.post-list-item.fade.in {
      display: inline; 
 }
 
+
+/*search button*/
+.pure-form input[type=text], .pure-form input[type=password], .pure-form input[type=email], .pure-form input[type=url], .pure-form input[type=date], .pure-form input[type=month], .pure-form input[type=time], .pure-form input[type=datetime], .pure-form input[type=datetime-local], .pure-form input[type=week], .pure-form input[type=number], .pure-form input[type=search], .pure-form input[type=tel], .pure-form input[type=color], .pure-form select, .pure-form textarea {
+    padding: .5em .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*分页*/
+.pagination {
+    overflow: auto;
+    text-align: center;
+    padding: 15px 0;
+}
