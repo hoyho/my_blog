@@ -62,7 +62,8 @@ def archives(request) :
 def about_me(request) :
     return render(request, 'aboutme.html',{'active_flag_aboutme':'active'})
 
-
+def resume_zh(request) :
+    return render(request, 'resume_zh.html')
 
 def search_tag(request, tag) :
     try:

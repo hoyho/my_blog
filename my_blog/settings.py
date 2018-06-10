@@ -28,7 +28,7 @@ SECRET_KEY = '@ptcfvcqdq8g2#9ax=2hpo%bj9p%5nrkdn62af8=)l1ns^(&j+'
 DEBUG = True
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['128.199.134.134','hear2say.me', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['111.230.165.126','xxdv.net','128.199.134.134','here2say.me', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -125,6 +125,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+DEBUG = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
