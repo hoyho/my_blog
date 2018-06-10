@@ -51,6 +51,7 @@ urlpatterns =[
     url(r'^(?P<id>\d+)/$', detail, name='detail'),
     url(r'^archives/$', archives, name='archives'),
     url(r'^aboutme/$', about_me, name = 'about_me'),
+    #url(r'^resume_zh/$',resume_zh,name = 'resume_zh'),
     url(r'^tag/(?P<tag>\w+)/$', search_tag, name='search_tag'),
     url(r'^wechat', weixin_main,name='weixin_main'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
