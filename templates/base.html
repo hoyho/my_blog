@@ -36,12 +36,7 @@
     <link rel="stylesheet" href="{{BASE_DIR}}/static/foundation.css">
     <script src="{{BASE_DIR}}/static/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <!--
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
--->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
+ 
 </head>
 
 
@@ -175,22 +170,6 @@
  -->
   
    </div>
-
-<div id="gitalk-container"></div>
-<script>
-const gitalk = new Gitalk({
-  clientID: '39c002330bce9a145b44',
-  clientSecret: '5c3da0d2c63db76676e71e21a57876d674d0b09e',
-  repo: 'my_blog',
-  owner: 'hoyho',
-  admin: ['hoyho'],
-  id: location.pathname     // Ensure uniqueness and length less than 50
- // distractionFreeMode: false  // Facebook-like distraction free mode
-})
-
-gitalk.render('gitalk-container')
-</script>
-
 
         </div>
     </div>
