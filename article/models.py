@@ -7,8 +7,8 @@ from DjangoUeditor.models import UEditorField
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 
-
 # Create your models here.
+#富文档编辑模式
 class Article(models.Model) :
     title = models.CharField(max_length = 100)  #博客题目
     category = models.CharField(max_length = 50, blank = True)  #博客标签
@@ -16,13 +16,9 @@ class Article(models.Model) :
     intro = models.TextField(max_length=500,null = True,blank=True)
     date_time = models.DateTimeField(auto_now_add = True)  #博客日期
     #content = models.TextField(blank = True, null = True)  #博客文章正文
-    #content = RichTextField('正文')
     content = RichTextUploadingField('正文')
-    '''
-    content = UEditorField('内容', height=300, width=1000,
-                           default=u'', blank=True, imagePath="uploads/images/",
-                           toolbars='besttome', filePath='uploads/files/')
-    '''
+    markdown_content = models.TextField(blank = True, null = True)  #博客文章markdown 存储，因为RichTextUploadingField存储或自动添加一些标签如<p>
+    
     #python2使用__unicode__, python3使用__str__
     def __str__(self) :
         return self.title
