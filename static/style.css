@@ -702,7 +702,7 @@ body{-webkit-tap-highlight-color:rgba(255,255,255,0);-webkit-overflow-scrolling:
 body,html{position:relative;min-height:100%;height:100%}
 .lock{overflow:hidden;max-height:100%}
 body,button,input,option,select,textarea{font:400 1em Roboto,"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei",sans-serif}
-blockquote,body,button,dd,dl,figure,h1,h2,h3,h4,h5,h6,input,p,pre{margin:0}
+blockquote,body,button,dd,dl,figure,h1,h2,h3,h4,h5,h6,input,p,pre{/*margin:0*/}
 button,input,legend,textarea{padding:0}
 fieldset,form,td,th{margin:0;padding:0}
 ol,ul{margin:12px 0;padding:0 0 0 32px}
