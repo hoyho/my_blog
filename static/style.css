@@ -786,7 +786,7 @@ a:hover{color:#303f9f;text-decoration:underline}
 .waves-circle{text-align:center;width:2.5em;height:2.5em;line-height:2.5em;border-radius:50%}
 .waves-float{-webkit-mask-image:none;box-shadow:0 1px 1.5px 1px rgba(0,0,0,.12);-webkit-transition:all .3s;transition:all .3s}
 .waves-float:active{box-shadow:0 8px 20px 1px rgba(0,0,0,.3)}
-.waves-block{display:""}
+.waves-block{display:list-item}
 #main,.container{position:relative}
 #menu-off{position:absolute;top:0;left:100%;-webkit-transition:.4s ease-in-out;transition:.4s ease-in-out}
 #menu{top:0;left:0;bottom:0;z-index:66;min-height:100%;background:#fff;box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);-webkit-transition:.4s cubic-bezier(.18,.81,.3,.89);transition:.4s cubic-bezier(.18,.81,.3,.89);will-change:transform,-webkit-transform}
