@@ -1,7 +1,5 @@
 {% extends "base_comment.html" %}
-<!--
-{% load markdown_deux_tags %}
--->
+
 {% load custom_markdown %}
 
 {% block content %}
@@ -17,7 +15,8 @@
 
                 <div class="post-description">
                     <p>
-                        {{ post.content|custom_markdown }}
+                            {{ post.formatted_markdown}}
+
                     </p>
 
                 </div>

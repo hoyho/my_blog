@@ -41,21 +41,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'article',  #这里填写的是app的名称
-    'DjangoUeditor',
-    'django_markdown',
+    #'markdownx',
     'ckeditor',
     'ckeditor_uploader',
     'pygments',
-    'markdown_deux'
 ]
 
-MIDDLEWARE_CLASSES = [
+
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    #'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -176,16 +175,6 @@ STATICFILES_DIRS = (
 
     os.path.join(BASE_DIR, 'static'),
 )
-
-# 其它 存放静态文件的文件夹，可以用来存放项目中公用的静态文件，里面不能包含 STATIC_ROOT
-# 如果不想用 STATICFILES_DIRS 可以不用，都放在 app 里的 static 中也可以
-#STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, "common_static"),
-    #'/home/hoyho/ENV3/bin/my_blog/DjangoUeditor/static/',  # 用不到的时候可以不写这一行
-    #'/root/ENV3/bin/my_blog/DjangoUeditor/static/',  # 用不到的时候可以不写这一行
-#)
-
-
 
 
 #邮件配置

@@ -1,11 +1,15 @@
 #coding:utf-8
 from django.db import models
-from django.core.urlresolvers import reverse
+
+from django.urls import reverse
 
 #see how to add editor http://www.ziqiangxuetang.com/django/django-cms-develop2.html'
 from DjangoUeditor.models import UEditorField
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.utils.safestring import mark_safe
+
+import markdown
 
 # Create your models here.
 #富文档编辑模式
@@ -23,6 +27,15 @@ class Article(models.Model) :
     def __str__(self) :
         return self.title
 
+    #Create a property that returns the markdown instead
+    @property
+    @mark_safe
+    def formatted_markdown(self):
+        if self.markdown_content != None:
+            html = markdown.markdown(self.markdown_content,extensions=["fenced_code"])
+        else:
+            html = self.content      
+        return html
 
 #获取URL并转换成url的表示格式
     def get_absolute_url(self):

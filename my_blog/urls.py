@@ -46,7 +46,7 @@ urlpatterns =[
     # url(r'^$', 'my_blog.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='home'),
     url(r'^(?P<id>\d+)/$', detail, name='detail'),
     url(r'^archives/$', archives, name='archives'),
