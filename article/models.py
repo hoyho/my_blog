@@ -3,8 +3,6 @@ from django.db import models
 
 from django.urls import reverse
 
-#see how to add editor http://www.ziqiangxuetang.com/django/django-cms-develop2.html'
-from DjangoUeditor.models import UEditorField
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.utils.safestring import mark_safe

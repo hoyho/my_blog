@@ -22,7 +22,6 @@ from django.views.static import serve
 
 from article.views import home,detail,weixin_main,archives,about_me,resume_zh,search_tag,blog_search,RSSFeed
 
-from DjangoUeditor import urls as DjangoUeditor_urls
 import  ckeditor
 
 '''
