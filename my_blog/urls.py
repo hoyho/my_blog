@@ -20,31 +20,12 @@ from django.contrib import admin
 from django.conf import settings
 from django.views.static import serve
 
-from article.views import home,detail,weixin_main,archives,about_me,resume_zh,search_tag,blog_search,RSSFeed
+from article.views import home,detail,archives,about_me,resume_zh,search_tag,blog_search,RSSFeed
 
 import  ckeditor
 
-'''
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'my_blog.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'article.views.home'),
-    url(r'^(?P<id>\d+)/$', 'article.views.detail', name='detail'),
-    url(r'^wechat', 'article.views.weixin_main'),
-    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
-    #url(r'^ueditor/', include('DjangoUeditor.urls' )),
-
-)
-'''
 urlpatterns =[
-    #'',
-    # Examples:
-    # url(r'^$', 'my_blog.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='home'),
     url(r'^(?P<id>\d+)/$', detail, name='detail'),
@@ -52,13 +33,10 @@ urlpatterns =[
     url(r'^aboutme/$', about_me, name = 'about_me'),
     url(r'^resume_zh/$',resume_zh,name = 'resume_zh'),
     url(r'^tag/(?P<tag>\w+)/$', search_tag, name='search_tag'),
-    url(r'^wechat', weixin_main,name='weixin_main'),
+#    url(r'^wechat', weixin_main,name='weixin_main'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^search/$',blog_search, name = 'search'),
     url(r'^feed/$', RSSFeed(), name="RSS"), #新添加的urlconf, 并将name设置为RSS, 方便在模板中使用url
-    #url(r'^ueditor/', include('DjangoUeditor.urls' )),
-
-
 ]
 
 # serving media files only on debug mode
