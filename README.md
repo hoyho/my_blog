@@ -47,6 +47,9 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+if you would like to use mysql please see docs/migrate2mysql.md
+
+
 ### Deployment
 
 1. update setting at my_blog/autostartwebsite.sh and my_blog/webconfig_uwsgi.ini
