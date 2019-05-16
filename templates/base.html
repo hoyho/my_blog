@@ -135,13 +135,14 @@
                  {% if post_list.has_previous %}
                  <a class="newer-posts" href="?page={{ post_list.previous_page_number }}">
                      <i class="icon-left"></i>
-                     Prev Page  
+                     👈Prev Page
                 </a>
+                &nbsp;&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp;&nbsp
                  {% endif %}
                  <!-- span class="page-number">第 {{ post_list.current_page_number }} 页 / 共 7 页</span -->
                  {% if post_list.has_next %}
                  <a class="older-posts" href="?page={{ post_list.next_page_number }}">
-                     Next Page <i class="icon-right"></i></a>
+                    Next Page👉 <i class="icon-right"></i></a>
                  {% endif %}
                  </ul>
                  </nav>
