@@ -11,7 +11,7 @@ but now migrated to Tencent Cloud for domestic visiting
 
 ### How to run on your local machine
 
-1. prepare you environment by running:
+1. prepare youe environment by running:
 
     ```bash
     python3 -m venv env
@@ -34,7 +34,7 @@ but now migrated to Tencent Cloud for domestic visiting
 
 FAQ:
 
-when update a css or js
+when update any css or js file
 please remember to execute:
 `python manage.py collectstatic`
 and refresh browser page forcely
