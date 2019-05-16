@@ -9,7 +9,7 @@ theme:google　Material design
 Previously it host at [digital ocean](https://m.do.co/c/72dc886d7d8e)
 but now migrated to Tencent Cloud for domestic visiting
 
-How to run on your local machine:
+### How to run on your local machine
 
 1. prepare you environment by running:
 
@@ -46,6 +46,12 @@ run:
 python manage.py makemigrations
 python manage.py migrate
 ```
+
+### Deployment
+
+1. update setting at my_blog/autostartwebsite.sh and my_blog/webconfig_uwsgi.ini
+or
+2. use docker (still under development)
 
 =======
 **issue**

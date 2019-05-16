@@ -29,9 +29,11 @@ class Article(models.Model) :
     @property
     @mark_safe
     def formatted_markdown(self):
-        if self.markdown_content != None:
+        if self.markdown_content !=None and len(self.markdown_content) > 0:
+            #print("md:"+self.markdown_content)
             html = markdown.markdown(self.markdown_content,extensions=["fenced_code"])
         else:
+            #print("ht:"+self.content)
             html = self.content      
         return html
 
