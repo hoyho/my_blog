@@ -32,6 +32,16 @@ but now migrated to Tencent Cloud for domestic visiting
     python manage.py runserver
     ```
 
+### Run in docker
+1. build
+`docker build -t here2say .`
+
+2. run
+`docker run  -d -p 8000:80 --name my_blog --restart=always  -v $(pwd)/media:/app/media here2say`
+
+3. test it
+`curl localhost:8000`
+
 FAQ:
 
 when update any css or js file
@@ -51,7 +61,7 @@ python manage.py migrate
 
 1. update setting at my_blog/autostartwebsite.sh and my_blog/webconfig_uwsgi.ini
 or
-2. use docker (still under development)
+2. use docker ~~(still under development)~~
 
 =======
 **issue**
