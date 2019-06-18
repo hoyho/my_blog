@@ -1,6 +1,6 @@
 #!/bin/bash
-python manage.py migrate                  # Apply database migrations
-python manage.py collectstatic --noinput  # Collect static file
+python3 manage.py migrate                  # Apply database migrations
+python3 manage.py collectstatic --noinput  # Collect static file
 
 uwsgi --ini /app/my_blog/webconfig_uwsgi_docker.ini &
 
