@@ -28,7 +28,6 @@ RUN apt-get update && \
 	python3-setuptools \
 	python3-pip \
 	nginx \
-	supervisor \
 	sqlite3 && \
 	pip3 install -U pip setuptools && \
    rm -rf /var/lib/apt/lists/*
@@ -39,7 +38,6 @@ RUN pip3 install uwsgi
 # setup all the configfiles
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/
-COPY supervisor-app.conf /etc/supervisor/conf.d/
 
 # COPY requirements.txt and RUN pip install BEFORE adding the rest of your code, this will cause Docker's caching mechanism
 # to prevent re-installing (all your) dependencies when you made a change a line or two in your app.
@@ -55,9 +53,5 @@ COPY . /app
 EXPOSE 80
 #CMD ["uwsgi","--ini","/app/my_blog/webconfig_uwsgi_docker.ini"]
 
-#EXPOSE 80
-#CMD ["supervisord", "-n"]
-#ENTRYPOINT [ "/usr/sbin/nginx", "-g", "daemon off;" ]  
 
-COPY entrypoint.sh /app
 ENTRYPOINT ["sh","/app/entrypoint.sh"]
