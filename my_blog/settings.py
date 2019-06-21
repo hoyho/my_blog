@@ -97,14 +97,15 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'my_blog',
-        'USER': 'remote',
-        'PASSWORD': '$',
-        'HOST': 'somewhere.com',
-        'PORT': '3306',
+        'NAME': os.getenv("DB_NAME","my_blog"),
+        'USER': os.getenv("DB_USER","db_user"),
+        'PASSWORD': os.getenv("DB_PASSWORD","db_psw"),
+        'HOST': os.getenv("DB_HOST","localhost"),
+        'PORT': os.getenv("DB_PORT","3306"),
         'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
+
 
 
 # Password validation
@@ -195,8 +196,8 @@ STATICFILES_DIRS = (
 #邮件配置
 EMAIL_HOST = '204.10.77.29'                   #SMTP地址
 EMAIL_PORT = 8025                                 #SMTP端口
-EMAIL_HOST_USER = 'spreadadmin'       #我自己的邮箱
-EMAIL_HOST_PASSWORD = 's190854'                  #我的邮箱密码
+EMAIL_HOST_USER = 'spreadadmin***'       #我自己的邮箱
+EMAIL_HOST_PASSWORD = '****'                  #我的邮箱密码
 
 EMAIL_SUBJECT_PREFIX = u'debug info:'            #为邮件Subject-line前缀,默认是'[django]'
 EMAIL_USE_TLS = True                             #与SMTP服务器通信时，是否启动TLS链接(安全链接)。默认是false

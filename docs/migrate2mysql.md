@@ -60,7 +60,11 @@ or
 `sudo yum install python3-devel # Red Hat / CentOS`
 
 5. migrate the datestruct to new db
-`python manage.py migrate`
+
+```python
+python manage.py makemigrations
+python manage.py migrate
+```
 
 6. import data to mysql
 

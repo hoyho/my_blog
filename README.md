@@ -56,6 +56,18 @@ if you would like to use mysql please see docs/migrate2mysql.md
 or
 2. use docker (still under development)
 
+
+### Database
+
+Previously, this project use SQLite as default database.
+Using SQLite has some limitation. For exapmle, you need to copy and distribute the db file.
+That's inconvenient and have some potential problem. That why I change to use MySQL by default.
+
+fill you db info at settings.py or ststem Environment when you deploy or debug.
+
+If you prefer to SQLite, see [docs](docs/sqlite.md). 
+This should be fairly easy.
+
 =======
 **issue**
 
