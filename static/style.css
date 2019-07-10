@@ -1264,3 +1264,224 @@ li.post-list-item.fade.in {
     text-align: center;
     padding: 15px 0;
 }
+
+
+
+/*#article-list*/
+.article .panel {
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        /* margin: 80% 2em 0; */
+        text-align: right;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+}
+.aboutme {
+    margin-bottom: 7em;
+    position: relative;
+}
+
+.aboutme .panel {
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.aboutme .panel:hover {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 16px 0 rgba(0, 0, 0, 0.19);
+}
+
+.artaboutmeicle .header {
+    position: relative;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #DDD;
+}
+
+.aboutme .header .title {
+    padding-right: 78px;
+    line-height: 1.5;
+}
+
+.aboutme .header a {
+    color: #444;
+}
+
+.aboutme .header a:hover {
+    color: #0a6ebd;
+    text-decoration: none;
+}
+
+.aboutme .header .meta {
+    position: absolute;
+    top: -10px;
+    right: 0;
+}
+
+.aboutme .meta .date {
+    color: #CCC;
+}
+
+.aboutme .meta .date .month {
+    font-size: 3em;
+}
+
+.aboutme .meta .date .day {
+    vertical-align: top;
+    font-size: 1.3em;
+    text-decoration: underline;
+    margin-top: .6em;
+    display: inline-block;
+}
+
+.aboutme .brief {
+    line-height: 1.75;
+    font-size: 16px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #DDD;
+}
+
+.aboutme .brief > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+.aboutme .brief h1 {
+    font-size: 26px;
+    border-bottom: 1px dashed #DDD;
+    padding-bottom: 11.5px;
+}
+
+.aboutme .brief h2 {
+    font-size: 24px;
+    border-bottom: 1px dashed #DDD;
+    padding-bottom: 11.5px;
+    margin-top: 18px;
+}
+
+.aboutme .brief h3 {
+    font-size: 22px;
+    border-bottom: 1px dashed #DDD;
+    padding-bottom: 11.5px;
+    margin-top: 18px;
+}
+
+.aboutme .brief h4 {
+    font-size: 20px;
+    border-bottom: 1px dashed #DDD;
+    padding-bottom: 11.5px;
+    margin-top: 18px;
+}
+
+.aboutme .brief h5,
+.aboutme .brief h6 {
+    font-size: 18px;
+}
+
+.aboutme .brief h1,
+.aboutme .brief h2,
+.aboutme .brief h3,
+.aboutme .brief h4,
+.aboutme .brief h5,
+.aboutme .brief h6 {
+    font-weight: 700;
+}
+
+.aboutme .brief img {
+    max-width: 100%;
+}
+
+.aboutme-pager .btn {
+    font-size: 1.8em;
+    margin: 0 1em;
+}
+
+.aboutme .brief pre code {
+    font-size: 14px;
+}
+
+.aboutme .brief pre {
+    box-shadow: none !important;
+    border-top-color: #DDD;
+    border-right-color: #DDD;
+    border-bottom-color: #DDD;
+}
+
+.aboutme .brief p > code,
+.aboutme .brief li > code {
+    color: #333;
+    background-color: #f1f1f1;
+}
+
+.aboutme .aside .tag {
+    margin-right: 1em;
+    font-size: 14px;
+}
+
+.aboutme .aside .stat {
+    font-size: 14px;
+}
+
+.aboutme table{
+    width: 100%;
+    margin: .5rem 1rem;
+    line-height: 3rem;
+}
+
+.aboutme td{
+    border-top: 1px solid #DDD;
+    padding:0 .5rem;
+}
+
+.aboutme th{
+    font-weight: bold;
+    padding:0 .5rem;
+    text-align: left;
+}
+
+#aboutme-single .aside {
+    padding-top: 8px;
+    border-bottom: 1px dashed #DDD;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+}
+
+.article .brief h3 {
+    font-size: 22px;
+    border-bottom: 1px dashed #DDD;
+    padding-bottom: 11.5px;
+    margin-top: 18px;
+}
+
+.article .brief {
+    line-height: 1.75;
+    font-size: 16px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #DDD;
+}
+
+.article .header {
+    position: relative;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #DDD;
+}
+
+.article .header .title {
+    font-size: 12px;
+    line-height: 1.5;
+}
