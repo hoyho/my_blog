@@ -1,4 +1,4 @@
-Django==2.2.2
+Django==2.2.4
 django-ckeditor==5.7.1 #or download from github then run python setup.py install
 django-js-asset==1.2.2
 Markdown==3.1
