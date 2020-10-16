@@ -1,7 +1,7 @@
 # Dday Blog
 
 my personal blog
-[here2say.tw](https://here2say.tw)
+[here2say.com](https://here2say.com)
 
 using Django with python 3.6
 theme:google　Material design
