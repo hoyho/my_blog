@@ -3,6 +3,6 @@ django-ckeditor==5.7.1 #or download from github then run python setup.py install
 django-js-asset==1.2.2
 Markdown==3.1
 Pillow==6.0.0
-Pygments==2.4.0
+Pygments==2.7.4
 pytz==2019.1
 sqlparse==0.3.0
