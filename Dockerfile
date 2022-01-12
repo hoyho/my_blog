@@ -11,11 +11,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-FROM ubuntu:16.04
+FROM python:3.6
 
 MAINTAINER luohaihao
 WORKDIR /app
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Install required packages and remove the apt packages cache when done.
 
@@ -23,10 +23,6 @@ RUN apt-get update && \
     apt-get upgrade -y && \ 	
     apt-get install -y \
 	git \
-	python3 \
-	python3-dev \
-	python3-setuptools \
-	python3-pip \
 	nginx \
 	sqlite3 && \
 	pip3 install -U pip setuptools && \
